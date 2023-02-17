@@ -94,7 +94,7 @@ const navigation = {
               </a>
             ))}
           </div>
-          <p className="mt-8 text-center text-base text-gray-400">&copy; 2020 Your Company, Inc. All rights reserved.</p>
+          <p className="mt-8 text-center text-base text-gray-400">&copy; {new Date().getFullYear()} mapdev, Inc. All rights reserved.</p>
         </div>
       </footer>
     )

@@ -45,7 +45,7 @@ export default function Contact() {
                       name="first-name"
                       id="first-name"
                       autoComplete="given-name"
-                      className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      className="block w-full rounded-md border-gray-300 shadow-sm focus:border-rose-500 focus:ring-rose-500 sm:text-sm"
                     />
                   </div>
                 </div>
@@ -59,7 +59,7 @@ export default function Contact() {
                       name="last-name"
                       id="last-name"
                       autoComplete="family-name"
-                      className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      className="block w-full rounded-md border-gray-300 shadow-sm focus:border-rose-500 focus:ring-rose-500 sm:text-sm"
                     />
                   </div>
                 </div>
@@ -73,7 +73,7 @@ export default function Contact() {
                       name="email"
                       type="email"
                       autoComplete="email"
-                      className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      className="block w-full rounded-md border-gray-300 shadow-sm focus:border-rose-500 focus:ring-rose-500 sm:text-sm"
                     />
                   </div>
                 </div>
@@ -87,7 +87,7 @@ export default function Contact() {
                       name="company"
                       id="company"
                       autoComplete="organization"
-                      className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      className="block w-full rounded-md border-gray-300 shadow-sm focus:border-rose-500 focus:ring-rose-500 sm:text-sm"
                     />
                   </div>
                 </div>
@@ -107,7 +107,7 @@ export default function Contact() {
                       id="phone"
                       autoComplete="tel"
                       aria-describedby="phone-description"
-                      className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      className="block w-full rounded-md border-gray-300 shadow-sm focus:border-rose-500 focus:ring-rose-500 sm:text-sm"
                     />
                   </div>
                 </div>
@@ -126,7 +126,7 @@ export default function Contact() {
                       name="how-can-we-help"
                       aria-describedby="how-can-we-help-description"
                       rows={4}
-                      className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      className="block w-full rounded-md border-gray-300 shadow-sm focus:border-rose-500 focus:ring-rose-500 sm:text-sm"
                       defaultValue={''}
                     />
                   </div>
@@ -140,7 +140,7 @@ export default function Contact() {
                         name="budget"
                         defaultValue="under_25k"
                         type="radio"
-                        className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                        className="h-4 w-4 border-gray-300 text-rose-600 focus:ring-rose-500"
                       />
                       <label htmlFor="budget-under-25k" className="ml-3">
                         <span className="block text-sm text-gray-700">Less than $25K</span>
@@ -152,7 +152,7 @@ export default function Contact() {
                         name="budget"
                         defaultValue="25k-50k"
                         type="radio"
-                        className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                        className="h-4 w-4 border-gray-300 text-rose-600 focus:ring-rose-500"
                       />
                       <label htmlFor="budget-25k-50k" className="ml-3">
                         <span className="block text-sm text-gray-700">$25K – $50K</span>
@@ -164,7 +164,7 @@ export default function Contact() {
                         name="budget"
                         defaultValue="50k-100k"
                         type="radio"
-                        className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                        className="h-4 w-4 border-gray-300 text-rose-600 focus:ring-rose-500"
                       />
                       <label htmlFor="budget-50k-100k" className="ml-3">
                         <span className="block text-sm text-gray-700">$50K – $100K</span>
@@ -176,7 +176,7 @@ export default function Contact() {
                         name="budget"
                         defaultValue="over_100k"
                         type="radio"
-                        className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-500"
+                        className="h-4 w-4 border-gray-300 text-rose-600 focus:ring-rose-500"
                       />
                       <label htmlFor="budget-over-100k" className="ml-3">
                         <span className="block text-sm text-gray-700">$100K+</span>
@@ -193,14 +193,14 @@ export default function Contact() {
                       type="text"
                       name="how-did-you-hear-about-us"
                       id="how-did-you-hear-about-us"
-                      className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                      className="block w-full rounded-md border-gray-300 shadow-sm focus:border-rose-500 focus:ring-rose-500 sm:text-sm"
                     />
                   </div>
                 </div>
                 <div className="text-right sm:col-span-2">
                   <button
                     type="submit"
-                    className="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                    className="inline-flex justify-center rounded-md border border-transparent bg-rose-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-rose-700 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-offset-2"
                   >
                     Submit
                   </button>

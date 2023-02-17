@@ -9,17 +9,17 @@ export default function HeroSection() {
             <div>
               <img
                 className="h-11 w-auto"
-                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                src="https://tailwindui.com/img/logos/mark.svg?color=rose&shade=600"
                 alt="Your Company"
               />
             </div>
             <div className="mt-20">
               <div>
                 <a href="#" className="inline-flex space-x-4">
-                  <span className="rounded bg-indigo-50 px-2.5 py-1 text-sm font-semibold text-indigo-600">
+                  <span className="rounded bg-rose-50 px-2.5 py-1 text-sm font-semibold text-rose-600">
                     What's new
                   </span>
-                  <span className="inline-flex items-center space-x-1 text-sm font-medium text-indigo-600">
+                  <span className="inline-flex items-center space-x-1 text-sm font-medium text-rose-600">
                     <span>Just shipped version 0.1.0</span>
                     <ChevronRightIcon className="h-5 w-5" aria-hidden="true" />
                   </span>
@@ -41,18 +41,18 @@ export default function HeroSection() {
                   <input
                     id="hero-email"
                     type="email"
-                    className="block w-full rounded-md border border-gray-300 px-5 py-3 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+                    className="block w-full rounded-md border border-gray-300 px-5 py-3 text-base text-gray-900 placeholder-gray-500 shadow-sm focus:border-rose-500 focus:ring-rose-500"
                     placeholder="Enter your email"
                   />
                 </div>
-                <div className="mt-4 sm:mt-0 sm:ml-3">
+                {/* <div className="mt-4 sm:mt-0 sm:ml-3">
                   <button
                     type="submit"
-                    className="block w-full rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base font-medium text-white shadow hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:px-10"
+                    className="block w-full rounded-md border border-transparent bg-rose-600 px-5 py-3 text-base font-medium text-white shadow hover:bg-rose-700 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-offset-2 sm:px-10"
                   >
                     Notify me
                   </button>
-                </div>
+                </div> */}
               </form>
               <div className="mt-6">
                 <div className="inline-flex items-center divide-x divide-gray-300">
@@ -65,7 +65,7 @@ export default function HeroSection() {
                   </div>
                   <div className="min-w-0 flex-1 py-1 pl-5 text-sm text-gray-500 sm:py-3">
                     <span className="font-medium text-gray-900">Rated 5 stars</span> by over{' '}
-                    <span className="font-medium text-indigo-600">500 beta users</span>
+                    <span className="font-medium text-rose-600">500 beta users</span>
                   </div>
                 </div>
               </div>

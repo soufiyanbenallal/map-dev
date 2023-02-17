@@ -22,7 +22,7 @@ export default function Newsletter() {
                 <h2 className="inline text-3xl font-bold tracking-tight text-gray-900 sm:block sm:text-4xl">
                     Want product news and updates?
                 </h2>
-                <p className="inline text-3xl font-bold tracking-tight text-indigo-600 sm:block sm:text-4xl">
+                <p className="inline text-3xl font-bold tracking-tight text-rose-600 sm:block sm:text-4xl">
                     Sign up for our newsletter.
                 </p>
             </div>
@@ -36,13 +36,13 @@ export default function Newsletter() {
               type="email"
               autoComplete="email"
               required
-              className="w-full rounded-md border-gray-300 px-5 py-3 placeholder-gray-500 focus:border-indigo-500 focus:ring-indigo-500 "
+              className="w-full rounded-md border-gray-300 px-5 py-3 placeholder-gray-500 focus:border-rose-500 focus:ring-rose-500 "
               placeholder="Enter your email"
             />
             <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
               <button
                 type="submit"
-                className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                className="flex w-full items-center justify-center rounded-md border border-transparent bg-rose-600 px-5 py-3 text-base font-medium text-white hover:bg-rose-700 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-offset-2"
               >
                 Notify me
               </button>
