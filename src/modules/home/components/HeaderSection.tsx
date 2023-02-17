@@ -33,7 +33,7 @@ const ReactCard = () => {
 };
 const SlackCard = () => {
   return (
-    <div className="absolute right-[18vw] top-[15vh] overflow-hidden w-12 h-12 rounded-xl shadow-md bg-[#181818]">
+    <div className="absolute left-[18vw] bottom-[15vh] overflow-hidden w-12 h-12 rounded-xl shadow-md bg-[#181818]">
         <img
         src={slack}
         className="object-cover w-12 h-12 animate-spin-slow "
