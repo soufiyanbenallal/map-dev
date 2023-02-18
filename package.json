@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --port=4000",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
@@ -14,10 +14,14 @@
     "@tailwindcss/forms": "^0.5.3",
     "axios": "^1.2.5",
     "framer-motion": "^8.5.4",
+    "localforage": "^1.10.0",
+    "match-sorter": "^6.3.1",
     "path": "^0.12.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sass": "^1.57.1"
+    "react-router-dom": "^6.8.1",
+    "sass": "^1.57.1",
+    "sort-by": "^1.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",
