@@ -17,7 +17,7 @@ export default function HomePage(): ReactElement {
     <>
       <HeaderSection />
       <ProjectsShowCaseSection />
-      <Logos />
+      {/* <Logos /> */}
       <HeroSection />
       <OurTeam />
       <Contact />
