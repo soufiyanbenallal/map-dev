@@ -15,11 +15,11 @@ const GithubCard = React.memo(() => {
        stiffness: 100,
        repeat: Infinity, 
        repeatDelay: 1,
-    //    duration: 120
-    //    restSpeed: 4
-    //    repeatType: 'mirror'
+      // duration: 120
+      // restSpeed: 4
+      // repeatType: 'mirror'
         // repeat: true
-}
+    }
   return (
     <motion.div animate={{ scale: [.7, 1, 1, 1, .7], opacity:[0, 1, 1, 1, 0], x:[-150, 0, 0, 0, 150] }} transition={{
         duration: 5,
@@ -53,12 +53,12 @@ const ReactCard = () => {
 };
 const SlackCard = () => {
   return (
-    <div className="absolute left-[18vw] bottom-[20vh] overflow-hidden w-12 h-12 rounded-xl shadow-md bg-[#181818]">
+    <motion.div {...MOTION_FADEOUT} className="absolute left-[18vw] bottom-[20vh] overflow-hidden w-12 h-12 rounded-xl shadow-md bg-[#181818]">
         <img
         src={slack}
         className="object-cover w-12 h-12 animate-spin-slow "
       />
-    </div>
+    </motion.div>
   );
 };
 
@@ -68,11 +68,11 @@ export default function HeaderSection() {
       <div className="absolute right-0 bottom-0 w-full ">
         <img src={network} className="-mr-[10%] opacity-30" />
       </div>
-      <img
+      <motion.img {...MOTION_FADEOUT}
         src={figma}
         className="absolute left-[10vw] top-[40vh] object-contain bg-black w-12 h-12 rounded-xl shadow-md"
       />
-      <img
+      <motion.img {...MOTION_FADEOUT}
         src={code}
         className="absolute right-[3vw] bottom-[10vh] object-cover w-80 rounded-xl"
       />
