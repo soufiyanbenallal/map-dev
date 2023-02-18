@@ -5,12 +5,32 @@ import react from "@/assets/svg/react.svg";
 import github from "@/assets/svg/github.svg";
 import figma from "@/assets/gif/figma_logo_animation.gif";
 import slack from "@/assets/gif/slack.gif";
-// import {  } from '@heroicons/react/24/outline'
+import { motion } from 'framer-motion'
+import { MOTION_FADEUP } from "@/constants";
 
-const GithubCard = () => {
+const GithubCard = React.memo(() => {
+     const spring = {
+       type: "spring",
+       damping: 10,
+       stiffness: 100,
+       repeat: Infinity, 
+       repeatDelay: 1,
+    //    duration: 120
+    //    restSpeed: 4
+    //    repeatType: 'mirror'
+        // repeat: true
+}
   return (
-    <div className="absolute left-[8vw] top-[15vh] flex items-center gap-3 px-3 h-12 rounded-xl shadow-md bg-white">
-      <img
+    <motion.div animate={{ scale: [.7, 1, 1, 1, .7], opacity:[0, 1, 1, 1, 0], x:[-150, 0, 0, 0, 150] }} transition={{
+        duration: 5,
+        delay:1,
+        ease: "easeInOut",
+        times: [0, 0.2, 0.5, 0.8, 1],
+        repeat: Infinity,
+        repeatDelay: 4
+      }} className="absolute left-[8vw] top-[15vh] flex items-center gap-3 px-3 h-12 rounded-xl shadow-md bg-white">
+      <motion.img
+        initial={{rotate:360}} animate={{rotate:0 }}  transition={spring}
         src={github}
         className="object-cover w-6 h-6"
       />
@@ -18,9 +38,9 @@ const GithubCard = () => {
         <span className="opacity-70 mr-0.5">@soufiyanbenallal</span>
         <span>Add prettier as formatting doc.</span>
       </p>
-    </div>
+    </motion.div>
   );
-};
+});
 const ReactCard = () => {
   return (
     <div className="absolute right-[8vw] top-[15vh] flex items-center justify-center w-12 h-12 p-2 rounded-xl shadow-md bg-gray-800">
@@ -69,7 +89,7 @@ export default function HeaderSection() {
           }}
         ></div>
         <div className="relative z-10">
-          <h1 className="flex flex-col items-center gap-3">
+          <motion.h1 {...MOTION_FADEUP} className="flex flex-col items-center gap-3">
             <p className="relative text-xl md:text-[1.6rem] tracking-widest font-extralight text-slate-600 -mb-2 px-4">
               <span>We bring everything that's required to build apps</span>
               <span className="blur-md z-[-1] absolute left-0 top-1.5 w-full h-5 opacity-70 bg-gradient-to-r from-cyan-400 via-yellow-500 to-rose-600"></span>
@@ -77,7 +97,7 @@ export default function HeaderSection() {
             <p className="text-5xl md:text-7xl max-w-2xl text-center font-black tracking-wide uppercase bg-gradient-to-b from-slate-600 to-gray-800 bg-clip-text text-transparent">
               A development team
             </p>
-          </h1>
+          </motion.h1>
           <p className="mt-3 text-center text-sm font-light text-gray-500 md:mt-5 md:max-w-xl md:text-sm max-w-md mx-auto">
             You’ll definitely find inspiration in what other people think,
             getting to know new tools and solutions – ready to use in your own

@@ -20,7 +20,7 @@ export default function Header() {
             {/* <div className="flex items-center"> */}
               <a href="#" className='flex gap-2'>
                 <img src={logo}  className="h-7" alt="React logo" />
-                <span className="sr-conly uppercase font-black text-slate-800">MAPDEV</span>
+                <span className="-tracking-[0.1rem] uppercase font-black bg-gradient-to-r from-rose-500 to-cyan-600 bg-clip-text text-transparent">MAPDEV</span>
               </a>
               <div className="ml-4 hidden space-x-8 lg:block">
                 {navigation.map((link) => (
