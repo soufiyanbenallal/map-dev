@@ -81,13 +81,13 @@ export default function HeaderSection() {
       <GithubCard />
       <SlackCard />
 
+      <div
+        className="opacity-10 blur-3xl fixed w-full h-full z-0 bg-no-repeat bg-cover"
+        style={{
+          backgroundImage: `url(https://www.nicepng.com/png/full/51-512313_abstract-colors-png-file-abstract-colorful-dots-background.png)`,
+        }}
+      ></div>
       <div className="w-full px-4 min-h-[93vh] flex flex-col items-center justify-center py-20">
-        <div
-          className="opacity-10 blur-3xl absolute w-full h-full z-0 bg-no-repeat bg-cover"
-          style={{
-            backgroundImage: `url(https://www.nicepng.com/png/full/51-512313_abstract-colors-png-file-abstract-colorful-dots-background.png)`,
-          }}
-        ></div>
         <div className="relative z-10">
           <h1  className="flex flex-col items-center gap-3">
             <motion.p {...MOTION_FADEDOWN} className="relative text-xl md:text-[1.6rem] tracking-widest font-extralight text-slate-600 -mb-2 px-4">
