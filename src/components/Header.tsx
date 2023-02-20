@@ -27,7 +27,7 @@ export default function Header() {
             {/* <div className="flex items-center"> */}
               <a href="#" className='flex gap-2 outline-none'>
                 <img src={logo}  className="h-7" alt="React logo" />
-                <span className="-tracking-[0.1rem] mt-0.5 uppercase font-black bg-gradient-to-r via-orange-600 from-rose-500 to-yellow-500 bg-clip-text text-transparent">MAPDEV</span>
+                {/* <span className="-tracking-[0.04rem] mt-0.5  font-black bg-gradient-to-r to-slate-600 from-gray-800 bg-clip-text text-transparent">mapdev</span> */}
               </a>
               <div className="ml-4 hidden gap-8 md:flex">
                 {navigation.map((link) => (
@@ -43,7 +43,7 @@ export default function Header() {
                 <button 
                  
                   style={{textShadow:'text-shadow: 0 1px 2px #00000063'}}
-                  className='rounded-xl h-9 drop-shadow-md px-8 py-1 text-sm bg-gradient-to-tr from-via-600 from-rose-500 to-yellow-500 hover:scale-105 hover:opacity-90 transition-all text-white font-semibold'>Let's talk</button>
+                  className='rounded-full h-9 drop-shadow-md px-8 py-1 text-sm bg-gradient-to-l from-slate-900 to-gray-700 hover:scale-105 hover:opacity-90 transition-all text-white font-semibold'>Let's talk</button>
               </div>
             {/* </div> */}
           </div>

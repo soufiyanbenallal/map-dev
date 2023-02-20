@@ -12,8 +12,6 @@ import HeaderSection from './components/HeaderSection'
 import ProjectsShowCaseSection from './components/ProjectsShowCaseSection'
 
 export default function HomePage(): ReactElement {
-  const [count, setCount] = useState(0)
-
   return (
     <>
       <HeaderSection />

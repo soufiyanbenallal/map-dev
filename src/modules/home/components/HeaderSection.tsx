@@ -4,7 +4,7 @@ import code from "@/assets/svg/code.svg";
 import react from "@/assets/svg/react.svg";
 import github from "@/assets/svg/github.svg";
 import figma from "@/assets/gif/figma_logo_animation.gif";
-import slack from "@/assets/gif/slack.gif";
+import slack from "@/assets/svg/slack.svg";
 import { motion } from 'framer-motion'
 import { MOTION_FADEDOWN, MOTION_FADEIN, MOTION_FADEOUT, MOTION_FADEUP } from "@/constants";
 
@@ -43,7 +43,7 @@ const GithubCard = React.memo(() => {
 });
 const ReactCard = () => {
   return (
-    <motion.div {...MOTION_FADEOUT} className="absolute right-[8vw] top-[15vh] flex items-center justify-center w-12 h-12 p-2 rounded-xl shadow-md bg-gray-800">
+    <motion.div {...MOTION_FADEOUT} className="animate-flicker animate-delay-2 absolute right-[8vw] top-[15vh] flex items-center justify-center w-12 h-12 p-2 rounded-xl shadow-md bg-gray-800">
         <img
         src={react}
         className="object-cover w-6 animate-spin-slow "
@@ -53,10 +53,10 @@ const ReactCard = () => {
 };
 const SlackCard = () => {
   return (
-    <motion.div {...MOTION_FADEOUT} className="absolute left-[18vw] bottom-[20vh] overflow-hidden w-12 h-12 rounded-xl shadow-md bg-[#181818]">
+    <motion.div {...MOTION_FADEOUT} className="animate-flicker animate-delay-1 absolute left-[18vw] bottom-[20vh] overflow-hidden w-12 h-12 flex justify-center items-center rounded-xl shadow-md bg-[#521753]">
         <img
         src={slack}
-        className="object-cover w-12 h-12 animate-spin-slow "
+        className="object-cover w-6 h-6 animate-spin-slow"
       />
     </motion.div>
   );
@@ -70,7 +70,7 @@ export default function HeaderSection() {
       </div>
       <motion.img {...MOTION_FADEOUT}
         src={figma}
-        className="absolute left-[10vw] top-[40vh] object-contain bg-black w-12 h-12 rounded-xl shadow-md"
+        className="absolute left-[10vw] top-[40vh] object-contain bg-black w-12 h-12 rounded-xl shadow-md animate-flicker animate-delay-4"
       />
       <motion.img {...MOTION_FADEOUT}
         src={code}
@@ -80,13 +80,6 @@ export default function HeaderSection() {
       <ReactCard />
       <GithubCard />
       <SlackCard />
-
-      <div
-        className="opacity-10 blur-3xl fixed w-full h-full z-0 bg-no-repeat bg-cover"
-        style={{
-          backgroundImage: `url(https://www.nicepng.com/png/full/51-512313_abstract-colors-png-file-abstract-colorful-dots-background.png)`,
-        }}
-      ></div>
       <div className="w-full px-4 min-h-[93vh] flex flex-col items-center justify-center py-20">
         <div className="relative z-10">
           <h1  className="flex flex-col items-center gap-3">
