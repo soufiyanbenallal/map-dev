@@ -45,7 +45,7 @@ const people = [
     // More people...
   ]
   
-  export default function OurTeam() {
+  export default function OurTeam({profiles}:any) {
     return (
         <section className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:px-8 lg:py-24 space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
             <div className="space-y-5 sm:space-y-4 sticky top-28 self-start">
@@ -60,24 +60,24 @@ const people = [
                 role="list"
                 className="space-y-12 sm:-mt-8 sm:space-y-0 sm:divide-y sm:divide-gray-200 lg:gap-x-8 lg:space-y-0"
               >
-                {people.map((person, key) => (
+                {profiles?.map((profile: any, key: number) => (
                   <li key={key} className="sm:py-8">
-                    <div className="space-y-4 sm:grid sm:grid-cols-3 sm:items-start sm:gap-6 sm:space-y-0">
+                    <a href={profile.url} target='_blank' className="space-y-4 sm:grid sm:grid-cols-3 sm:items-start sm:gap-6 sm:space-y-0">
                       <div className="aspect-w-3 aspect-h-2 sm:aspect-w-3 sm:aspect-h-4">
-                        <img className="rounded-lg object-cover shadow-lg" src={person.imageUrl} alt="" />
+                        <img className="rounded-lg object-cover shadow-lg" src={profile.avatar_url} alt="" />
                       </div>
                       <div className="sm:col-span-2">
                         <div className="space-y-4">
                           <div className="space-y-1 text-lg font-medium leading-6">
-                            <h3>{person.name}</h3>
-                            <p className="text-rose-600">{person.role}</p>
+                            <h3>{profile.name}</h3>
+                            <p className="text-rose-600">{profile.role || 'Co-Founder / CEO'}</p>
                           </div>
                           <div className="text-lg">
-                            <p className="text-gray-500">{person.bio}</p>
+                            <p className="text-gray-500">{profile.bio}</p>
                           </div>
                           <ul role="list" className="flex space-x-5">
                             <li>
-                              <a href={person.twitterUrl} className="text-gray-400 hover:text-gray-500">
+                              <a href={profile.twitterUrl} className="text-gray-400 hover:text-gray-500">
                                 <span className="sr-only">Twitter</span>
                                 <svg className="h-5 w-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
                                   <path d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
@@ -85,7 +85,7 @@ const people = [
                               </a>
                             </li>
                             <li>
-                              <a href={person.linkedinUrl} className="text-gray-400 hover:text-gray-500">
+                              <a href={profile.linkedinUrl} className="text-gray-400 hover:text-gray-500">
                                 <span className="sr-only">LinkedIn</span>
                                 <svg className="h-5 w-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20">
                                   <path
@@ -99,7 +99,7 @@ const people = [
                           </ul>
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </li>
                 ))}
               </ul>
