@@ -104,7 +104,7 @@ export default function HeaderSection() {
             work.
           </p>
           <div className="flex justify-center gap-5 py-7">
-            <Link to={routesEnum.contact} className="button flex gap-3 text-sm font-semibold text-gray-700 bg-gray-50 border border-gray-400 hover:opacity-70 px-5 py-1.5">
+            <Link to={routesEnum.contact} className="button button-primary">
               <span>Support?</span>
               <ArrowRightIcon className="w-4" />
             </Link>

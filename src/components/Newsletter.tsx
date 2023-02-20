@@ -16,13 +16,13 @@
 */
 export default function Newsletter() {
     return (
-      <div className="bg-gradient-to-l from-slate-200 ">
+      <div className="bg-gradient-to-l from-slate-100 ">
         <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:py-24 lg:px-8 flex-col flex md:flex-row justify-between items-center">
             <div className="flex-1">
-                <h2 className="inline text-3xl font-bold tracking-tight text-gray-900 sm:block sm:text-4xl">
-                    Want product news and updates?
+                <h2 className="inline text-sm font-extralight tracking-widest text-gray-900 sm:block sm:text-base">
+                    Want application news and new updates?
                 </h2>
-                <p className="inline text-3xl font-bold tracking-tight text-rose-600 sm:block sm:text-4xl">
+                <p className="inline text-3xl font-bold tracking-tight text-rose-600 sm:block sm:text-3xl">
                     Sign up for our newsletter.
                 </p>
             </div>
@@ -42,7 +42,7 @@ export default function Newsletter() {
             <div className="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
               <button
                 type="submit"
-                className="flex w-full items-center justify-center rounded-md border border-transparent bg-rose-600 px-5 py-3 text-base font-medium text-white hover:bg-rose-700 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-offset-2"
+                className="flex w-full items-center justify-center rounded-md border border-transparent bg-gray-900 px-5 py-3 text-base font-medium text-white hover:bg-rose-700 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-offset-2"
               >
                 Notify me
               </button>

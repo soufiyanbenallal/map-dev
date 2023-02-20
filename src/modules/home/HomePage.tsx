@@ -9,17 +9,21 @@ import Newsletter from '@/components/Newsletter'
 import GithubProjectSection from './components/GithubProjectSection'
 import HeaderSection from './components/HeaderSection'
 import ProjectsShowCaseSection from './components/ProjectsShowCaseSection'
+import Divider from '@/components/Divider'
 
 export default function HomePage(): ReactElement {
   return (
     <>
       <HeaderSection />
       <ProjectsShowCaseSection />
-      {/* <Logos /> */}
+      <Divider />
       <GithubProjectSection />
-      <HeroSection />
-      <Contact />
+      <Divider />
+      <Logos />
+      {/* <HeroSection /> */}
+      {/* <Contact /> */}
       <Newsletter />
+      <Divider />
     </>
   )
 }

@@ -7,13 +7,16 @@ import HeroSection from '@/components/HeroSection'
 import Logos from '@/components/Logos'
 import Newsletter from '@/components/Newsletter'
 import OurTeam from '@/components/OurTeam'
+import Divider from '@/components/Divider'
 
 export default function HomePage(): ReactElement {
   return (
     <>
       <OurTeam />
-      <Contact />
+      {/* <Contact /> */}
+      <Divider />
       <Newsletter />
+      <Divider />
     </>
   )
 }

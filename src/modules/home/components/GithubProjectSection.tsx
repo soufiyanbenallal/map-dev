@@ -7,6 +7,7 @@ import Box from "@/components/Box";
 import { Link } from "react-router-dom";
 import { routesEnum } from "@/enums";
 import classNames from "classnames";
+import { ArrowRightIcon } from '@heroicons/react/20/solid'
 
 const url = import.meta.env.VITE_API || "";
 export default function GithubProjectSection() {
@@ -21,7 +22,7 @@ export default function GithubProjectSection() {
   }, []);
 
   return (
-    <section className="container mx-auto pb-60">
+    <section className="bg-white  z-[-1] relative">
       <article className="text-gray-800 p-20 flex flex-col items-center justify-center">
         <h3 className="text-3xl text-center w-full font-bold tracking-wide uppercase">Projects <span className="relative">showcase 
           
@@ -29,7 +30,7 @@ export default function GithubProjectSection() {
           </span></h3>
         <p className="text-sm text-slate-500 py-2 font-extralight">Our github open source app</p>
       </article>
-      <article>
+      <article className="container mx-auto">
         <ul className="grid grid-cols-2 md:grid-cols-3 gap-5">
           {projects.slice(0, 6).map((project,idx) => (
             <Box
@@ -70,8 +71,10 @@ export default function GithubProjectSection() {
         </ul>
       </article>
       <article className="p-20 flex items-center justify-center">
-        <Link to={routesEnum.works} className="button text-shadow text-sm font-semibold text-gray-800 border border-gray-800 bg-gray-200 px-8 py-2.5 hover:bg-gray-800 hover:text-white">
-          <span className="block leading-[1] -mt-0.5">Show more</span>
+        <Link to={routesEnum.works} className="button button-primary">
+          <span>Show more</span>
+          <ArrowRightIcon className="w-4" />
+
         </Link>
       </article>
     </section>

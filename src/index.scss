@@ -15,11 +15,10 @@
 
 .button {
   @apply outline-none rounded-full transition-all duration-300;
-  // top: 18px;
-  // right: 15px;
-  // width: 50px;
-  // height: 50px;
-  // border-radius: 50%;
+}
+
+.button-primary {
+  @apply flex gap-3 text-sm font-semibold text-gray-700 bg-gradient-to-t from-gray-200 shadow-sm to-slate-300 hover:shadow-none tracking-wider hover:scale-105 px-5 py-1.5;
 }
 .text-shadow {
   text-shadow: 1px 1px 1px #72727238
