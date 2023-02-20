@@ -75,7 +75,7 @@ const IconsAnimation = React.memo(()=> (
       />
       <motion.img {...MOTION_FADEOUT}
         src={code}
-        className="absolute right-[3vw] bottom-[10vh] object-cover w-80 rounded-xl"
+        className="absolute right-[3vw] bottom-[10vh] object-cover w-80 rounded-xl animate-flicker animate-delay-1"
       />
 
       <ReactCard />
