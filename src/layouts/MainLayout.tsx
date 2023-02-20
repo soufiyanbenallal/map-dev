@@ -1,8 +1,9 @@
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 import React, { ReactNode } from 'react'
+import { Outlet } from 'react-router-dom'
 
-export default function MainLayout({children}: {children: ReactNode}) {
+export default function MainLayout() {
   return (
     <div className="App">
       <div
@@ -12,7 +13,8 @@ export default function MainLayout({children}: {children: ReactNode}) {
         }}
       ></div>
       <Header />
-      {children}
+      {/* {children} */}
+      <Outlet />
       <Footer />
     </div>
   )

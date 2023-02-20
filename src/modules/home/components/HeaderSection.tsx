@@ -91,7 +91,7 @@ export default function HeaderSection() {
               A development team
             </motion.p>
           </h1>
-          <p className="mt-3 text-center text-sm font-light text-gray-500 md:mt-5 md:max-w-xl md:text-sm max-w-md mx-auto">
+          <p className="mt-3 text-center text-sm font-extralight text-gray-500 md:mt-5 md:max-w-xl md:text-sm max-w-md mx-auto">
             You’ll definitely find inspiration in what other people think,
             getting to know new tools and solutions – ready to use in your own
             work.
