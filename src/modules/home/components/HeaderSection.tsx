@@ -7,8 +7,11 @@ import figma from "@/assets/gif/figma_logo_animation.gif";
 import slack from "@/assets/svg/slack.svg";
 import { motion } from 'framer-motion'
 import { MOTION_FADEDOWN, MOTION_FADEIN, MOTION_FADEOUT, MOTION_FADEUP } from "@/constants";
+import { routesEnum } from "@/enums";
+import { Link } from "react-router-dom";
+import { ArrowRightIcon } from '@heroicons/react/20/solid'
 
-const GithubCard = React.memo(() => {
+const GithubCard = () => {
      const spring = {
        type: "spring",
        damping: 10,
@@ -40,7 +43,7 @@ const GithubCard = React.memo(() => {
       </p>
     </motion.div>
   );
-});
+};
 const ReactCard = () => {
   return (
     <motion.div {...MOTION_FADEOUT} className="animate-flicker animate-delay-2 absolute right-[8vw] top-[15vh] flex items-center justify-center w-12 h-12 p-2 rounded-xl shadow-md bg-gray-800">
@@ -61,11 +64,9 @@ const SlackCard = () => {
     </motion.div>
   );
 };
-
-export default function HeaderSection() {
-  return (
-    <section className="relative overflow-hidden">
-      <div className="absolute right-0 bottom-0 w-full ">
+const IconsAnimation = React.memo(()=> (
+  <>
+     <div className="absolute right-0 bottom-0 w-full ">
         <img src={network} className="-mr-[10%] opacity-30" />
       </div>
       <motion.img {...MOTION_FADEOUT}
@@ -80,6 +81,12 @@ export default function HeaderSection() {
       <ReactCard />
       <GithubCard />
       <SlackCard />
+  </>
+)) 
+export default function HeaderSection() {
+  return (
+    <section className="relative overflow-hidden">
+      <IconsAnimation />
       <div className="w-full px-4 min-h-[93vh] flex flex-col items-center justify-center py-20">
         <div className="relative z-10">
           <h1  className="flex flex-col items-center gap-3">
@@ -96,6 +103,12 @@ export default function HeaderSection() {
             getting to know new tools and solutions – ready to use in your own
             work.
           </p>
+          <div className="flex justify-center gap-5 py-7">
+            <Link to={routesEnum.contact} className="button flex gap-3 text-sm font-semibold text-gray-700 bg-gray-50 border border-gray-400 hover:opacity-70 px-5 py-1.5">
+              <span>Support?</span>
+              <ArrowRightIcon className="w-4" />
+            </Link>
+          </div>
         </div>
       </div>
     </section>

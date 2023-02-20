@@ -104,3 +104,7 @@
 .animate-delay-5 {
     animation-delay: 6s;
 }
+.mask1 {
+  -webkit-mask-image: linear-gradient(to bottom, transparent,black 80%, black);
+  mask-image: linear-gradient(to bottom, transparent,black 80%, black);
+}
