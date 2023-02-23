@@ -22,7 +22,7 @@ export default function GithubProjectSection() {
   }, []);
 
   return (
-    <section className="bg-white  z-[-1] relative">
+    <Box className="bg-white z-[-1] relative">
       <article className="text-gray-800 p-20 flex flex-col items-center justify-center">
         <h3 className="text-3xl text-center w-full font-bold tracking-wide uppercase">Projects <span className="relative">showcase 
           
@@ -35,10 +35,9 @@ export default function GithubProjectSection() {
           {projects.slice(0, 6).map((project,idx) => (
             <Box
               as='li'
-              y={40}
               delay={idx* 0.1}
               duration={1000}
-              variant='fadeup'
+              variant='fade'
               key={project.id}
               className={classNames(`animate-delay-${idx}`,"rounded-[12px] animate-gradient bg-gradient-to-r from-cyan-400 via-yellow-500 to-rose-600 p-0.5 shadow-xl hover:shadow-sm")}
             >
@@ -77,6 +76,6 @@ export default function GithubProjectSection() {
 
         </Link>
       </article>
-    </section>
+    </Box>
   );
 }

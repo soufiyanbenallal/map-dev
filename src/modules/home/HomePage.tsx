@@ -6,10 +6,11 @@ import Header from '@/components/Header'
 import HeroSection from '@/components/HeroSection'
 import Logos from '@/components/Logos'
 import Newsletter from '@/components/Newsletter'
+import Divider from '@/components/Divider'
 import GithubProjectSection from './components/GithubProjectSection'
 import HeaderSection from './components/HeaderSection'
 import ProjectsShowCaseSection from './components/ProjectsShowCaseSection'
-import Divider from '@/components/Divider'
+import FlowSection from './components/FlowSection'
 
 export default function HomePage(): ReactElement {
   return (
@@ -17,9 +18,11 @@ export default function HomePage(): ReactElement {
       <HeaderSection />
       <ProjectsShowCaseSection />
       <Divider />
-      <GithubProjectSection />
+      <FlowSection />
       <Divider />
       <Logos />
+      <Divider />
+      <GithubProjectSection />
       {/* <HeroSection /> */}
       {/* <Contact /> */}
       <Newsletter />

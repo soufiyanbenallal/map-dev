@@ -11,5 +11,5 @@ export default defineConfig({
         '@modules': path.resolve('src/modules'),
         '@assets': path.resolve('src/assets'),
     },
-},
+  },
 })
