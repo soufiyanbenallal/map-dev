@@ -35,7 +35,7 @@ export default function Header() {
                     }>
                       {link.name}
                     </NavLink>
-                    {link.href !== routesEnum.team && <span className='text-gray-400 text-xs pt-1'>•</span>}
+                    {link.href !== routesEnum.team && <span className='text-gray-400 text-xs pt-1 ml-8'>•</span>}
                   </Box>
                 ))}
               </ul>
