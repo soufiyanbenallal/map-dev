@@ -17,14 +17,17 @@
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./src/*"
-      ],
       "@modules/*": [
         "./src/modules/*"
       ],
       "@assets/*": [
         "./src/assets/*"
+      ],
+      "@components/*": [
+        "./src/components/*"
+      ],
+      "@/*": [
+        "./src/*"
       ]
     }
   },

@@ -46,7 +46,7 @@ const ArrowIcon = ({ className }: { className?: string }) => (
 );
 export default function FlowSection() {
   return (
-    <Box className="flex gap-2 py-40 items-center justify-between bg-white bg-opacity-90 px-10">
+    <Box duration={2000} className="flex gap-2 py-40 items-center justify-between bg-white bg-opacity-90 px-10">
       <article className="flex1 relative h-40 w-48">
         {/* left  */}
         <CodeBracketSquareIcon className="text-slate-700 w-9 opacity-75 absolute top-4 left-7" />

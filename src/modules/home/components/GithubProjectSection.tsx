@@ -1,13 +1,11 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
-import { motion } from "framer-motion";
-import { MOTION_FADEUP } from "@/constants";
 import { IProject } from "@/interfaces";
 import Box from "@/components/Box";
-import { Link } from "react-router-dom";
 import { routesEnum } from "@/enums";
 import classNames from "classnames";
 import { ArrowRightIcon } from '@heroicons/react/20/solid'
+import Button from "@components/Button";
 
 const url = import.meta.env.VITE_API || "";
 export default function GithubProjectSection() {
@@ -22,7 +20,7 @@ export default function GithubProjectSection() {
   }, []);
 
   return (
-    <Box className="bg-white z-[-1] relative">
+    <Box className="bg-white relative">
       <article className="text-gray-800 p-20 flex flex-col items-center justify-center">
         <h3 className="text-3xl text-center w-full font-bold tracking-wide uppercase">Projects <span className="relative">showcase 
           
@@ -70,11 +68,9 @@ export default function GithubProjectSection() {
         </ul>
       </article>
       <article className="p-20 flex items-center justify-center">
-        <Link to={routesEnum.works} className="button button-primary">
-          <span>Show more</span>
-          <ArrowRightIcon className="w-4" />
-
-        </Link>
+        <Button to={routesEnum.works} variant='secondary' icon={<ArrowRightIcon className="w-4 text-pink-700 animate-pulse" />}>
+          Show more
+        </Button>
       </article>
     </Box>
   );

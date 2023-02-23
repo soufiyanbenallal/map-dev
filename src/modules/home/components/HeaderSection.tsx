@@ -10,6 +10,9 @@ import { MOTION_FADEDOWN, MOTION_FADEIN, MOTION_FADEOUT, MOTION_FADEUP } from "@
 import { routesEnum } from "@/enums";
 import { Link } from "react-router-dom";
 import { ArrowRightIcon } from '@heroicons/react/20/solid'
+import Button from "@components/Button";
+import Box from "@components/Box";
+import classNames from "classnames";
 
 const GithubCard = () => {
      const spring = {
@@ -84,16 +87,27 @@ const IconsAnimation = React.memo(()=> (
   </>
 )) 
 export default function HeaderSection() {
+  const ColoredBg =({className}:{className?:string})=> <span className={classNames(className,"blur-md z-[-1] absolute left-0 top-1.5 w-full h-5 opacity-70 bg-gradient-to-r")}></span>
   return (
     <section className="relative overflow-hidden">
       <IconsAnimation />
       <div className="w-full px-4 min-h-[93vh] flex flex-col items-center justify-center py-20">
         <div className="relative z-10">
           <h1  className="flex flex-col items-center gap-3">
-            <motion.p {...MOTION_FADEDOWN} className="relative text-xl md:text-[1.6rem] tracking-widest font-extralight text-slate-600 -mb-2 px-4">
-              <span>We bring everything that's required to build apps</span>
-              <span className="blur-md z-[-1] absolute left-0 top-1.5 w-full h-5 opacity-70 bg-gradient-to-r from-cyan-400 via-yellow-500 to-rose-600"></span>
-            </motion.p>
+            <Box as="div" variant="fade" className="relative text-xl md:text-[1.6rem] tracking-widest font-extralight text-slate-600 -mb-2 px-4">
+              We bring
+              <span className="relative px-2">
+              everything
+                <ColoredBg className='from-cyan-400 to-rose-600' />
+              </span>
+                  that's required to  
+              <span className="relative px-2">
+              build apps
+                <ColoredBg className='from-rose-600 to-yellow-600' />
+              </span>
+
+              
+            </Box>
             <motion.p {...MOTION_FADEIN} className="text-5xl md:text-7xl max-w-2xl text-center font-black tracking-wide uppercase bg-gradient-to-b from-slate-600 to-gray-800 bg-clip-text text-transparent">
               A development team
             </motion.p>
@@ -104,10 +118,9 @@ export default function HeaderSection() {
             work.
           </p>
           <div className="flex justify-center gap-5 py-7">
-            <Link to={routesEnum.contact} className="button button-primary">
-              <span>Support?</span>
-              <ArrowRightIcon className="w-4" />
-            </Link>
+            <Button to={routesEnum.contact} variant='primary' icon={<ArrowRightIcon className="w-4" />}>
+              Support?
+            </Button>
           </div>
         </div>
       </div>

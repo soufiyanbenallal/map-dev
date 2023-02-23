@@ -4,6 +4,7 @@ import { NAVIGATION } from '@/constants';
 import { routesEnum } from '@/enums';
 import logo from '@assets/logo.svg'
 import classNames from 'classnames';
+import Button from './Button';
 
 
 
@@ -37,7 +38,9 @@ export default function Header() {
                   </Fragment>
                 ))}
               </div>
-              <Link to={routesEnum.contact} className='button text-shadow h-9 drop-shadow-md px-8 py-2 text-sm bg-gradient-to-l from-slate-900 to-gray-700 hover:scale-105 hover:opacity-90 text-white font-semibold'>Let's talk</Link>
+              <Button to={routesEnum.contact} variant='secondary'>
+                    Let's talk
+              </Button>
           </div>
         </nav>
       </header>
