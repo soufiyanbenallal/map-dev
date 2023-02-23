@@ -4,7 +4,7 @@ import { IProject } from "@/interfaces";
 import Box from "@/components/Box";
 import { routesEnum } from "@/enums";
 import classNames from "classnames";
-import { ArrowRightIcon } from '@heroicons/react/20/solid'
+import { ArrowRightIcon } from "@heroicons/react/20/solid";
 import Button from "@components/Button";
 
 const url = import.meta.env.VITE_API || "";
@@ -20,24 +20,32 @@ export default function GithubProjectSection() {
   }, []);
 
   return (
-    <Box className="bg-white relative">
+    <Box as="section" variant="fade" className="bg-white relative">
       <article className="text-gray-800 p-20 flex flex-col items-center justify-center">
-        <h3 className="text-3xl text-center w-full font-bold tracking-wide uppercase">Projects <span className="relative">showcase 
-          
-         <span className="blur-md z-[-1] absolute left-0 top-0 w-full h-9 opacity-70 bg-gradient-to-l from-cyan-400 via-yellow-500 to-rose-600"></span>
-          </span></h3>
-        <p className="text-sm text-slate-500 py-2 font-extralight">Our github open source app</p>
+        <h3 className="text-3xl text-center w-full font-bold tracking-wide uppercase">
+          Projects{" "}
+          <span className="relative">
+            showcase
+            <span className="blur-md z-[-1] absolute left-0 top-0 w-full h-9 opacity-70 bg-gradient-to-l from-cyan-400 via-yellow-500 to-rose-600"></span>
+          </span>
+        </h3>
+        <p className="text-sm text-slate-500 py-2 font-extralight">
+          Our github open source app
+        </p>
       </article>
       <article className="container mx-auto">
         <ul className="grid grid-cols-2 md:grid-cols-3 gap-5">
-          {projects.slice(0, 6).map((project,idx) => (
+          {projects.slice(0, 6).map((project, idx) => (
             <Box
-              as='li'
-              delay={idx* 0.1}
+              as="li"
+              delay={idx * 0.1}
               duration={1000}
-              variant='fade'
+              variant="fade"
               key={project.id}
-              className={classNames(`animate-delay-${idx}`,"rounded-[12px] animate-gradient bg-gradient-to-r from-cyan-400 via-yellow-500 to-rose-600 p-0.5 shadow-xl hover:shadow-sm")}
+              className={classNames(
+                `animate-delay-${idx}`,
+                "rounded-[12px] animate-gradient bg-gradient-to-r from-cyan-400 via-yellow-500 to-rose-600 p-0.5 shadow-xl hover:shadow-sm"
+              )}
             >
               <div className="rounded-[10px] bg-white h-full p-1 sm:p-3 !pt-10">
                 <time
@@ -68,7 +76,11 @@ export default function GithubProjectSection() {
         </ul>
       </article>
       <article className="p-20 flex items-center justify-center">
-        <Button to={routesEnum.works} variant='secondary' icon={<ArrowRightIcon className="w-4 text-pink-700 animate-pulse" />}>
+        <Button
+          to={routesEnum.works}
+          variant="secondary"
+          icon={<ArrowRightIcon className="w-4 text-pink-700 animate-pulse" />}
+        >
           Show more
         </Button>
       </article>

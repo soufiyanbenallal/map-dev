@@ -23,6 +23,7 @@ export default function HomePage(): ReactElement {
       <Logos />
       <Divider />
       <GithubProjectSection />
+      <Divider />
       {/* <HeroSection /> */}
       {/* <Contact /> */}
       <Newsletter />

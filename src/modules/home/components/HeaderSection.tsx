@@ -87,7 +87,7 @@ const IconsAnimation = React.memo(()=> (
   </>
 )) 
 export default function HeaderSection() {
-  const ColoredBg =({className}:{className?:string})=> <span className={classNames(className,"blur-md z-[-1] absolute left-0 top-1.5 w-full h-5 opacity-70 bg-gradient-to-r")}></span>
+  const ColoredBg =({className}:{className?:string})=> <span className={classNames(className,"blur-[9px] z-[-1] absolute left-0 top-1.5 w-full h-5 opacity-70 bg-gradient-to-r")}></span>
   return (
     <section className="relative overflow-hidden">
       <IconsAnimation />
@@ -98,30 +98,28 @@ export default function HeaderSection() {
               We bring
               <span className="relative px-2">
               everything
-                <ColoredBg className='from-cyan-400 to-rose-600' />
+                <ColoredBg className='from-pink-600 to-orange-400' />
               </span>
                   that's required to  
               <span className="relative px-2">
               build apps
-                <ColoredBg className='from-rose-600 to-yellow-600' />
+                <ColoredBg className='from-orange-500 to-purple-500' />
               </span>
-
-              
             </Box>
             <motion.p {...MOTION_FADEIN} className="text-5xl md:text-7xl max-w-2xl text-center font-black tracking-wide uppercase bg-gradient-to-b from-slate-600 to-gray-800 bg-clip-text text-transparent">
               A development team
             </motion.p>
           </h1>
-          <p className="mt-3 text-center text-sm font-extralight text-gray-500 md:mt-5 md:max-w-xl md:text-sm max-w-md mx-auto">
+          <Box as="p" variant="fade" className="mt-3 text-center text-sm font-extralight text-gray-500 md:mt-5 md:max-w-xl md:text-sm max-w-md mx-auto">
             You’ll definitely find inspiration in what other people think,
             getting to know new tools and solutions – ready to use in your own
             work.
-          </p>
-          <div className="flex justify-center gap-5 py-7">
-            <Button to={routesEnum.contact} variant='primary' icon={<ArrowRightIcon className="w-4" />}>
+          </Box>
+          <Box variant="fade" className="flex justify-center gap-5 py-7">
+            <Button to={routesEnum.contact} variant='primary' icon={<ArrowRightIcon className="w-4 animate-pulse" />}>
               Support?
             </Button>
-          </div>
+          </Box>
         </div>
       </div>
     </section>

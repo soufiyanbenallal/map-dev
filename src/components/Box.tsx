@@ -6,12 +6,20 @@ const elemets = [
     type: motion.div,
     key: "div",
   },
+  { type: motion.ul, key: "ul" },
   { type: motion.li, key: "li" },
   { type: motion.span, key: "span" },
+  { type: motion.section, key: "section" },
   { type: motion.article, key: "article" },
-];
-
-type ElementsType = "div" | "li" | "span" | "article";
+  { type: motion.p, key: "p" },
+  { type: motion.h1, key: "h1" },
+  { type: motion.h2, key: "h2" },
+  { type: motion.h3, key: "h3" },
+  { type: motion.h4, key: "h4" },
+  { type: motion.h5, key: "h5" },
+  { type: motion.img, key: "img" },
+]; 
+type ElementsType = "div" | "ul" | "li" | "span" | "section" | "article" | "p" | "h1" | "h2" | "h3" | "h4" | "h5" | 'img';
 type VariantType = "fadeup" | "fadein" | "fadeout" | "fadedown" | "fadeleft" | "faderight" | "fade" ;
 
 export interface IBox {
@@ -26,7 +34,7 @@ export interface IBox {
   [x:string]: any,
 }
 export default function Box(props: IBox) {
-    const { as, children, variant = 'fadeup', x=100, y=100, duration = 1000, ease="easeInOut",delay=0, ...restOfProps } = props
+    const { as, children, variant = 'fadeup', x=100, y=100, duration = 1500, ease="easeInOut",delay=0, ...restOfProps } = props
     const CustomMotionTag = elemets.find(({ key }) => key === as)?.type || motion.div;
   const MOTION_FADE = {
     initial: { opacity: 0 },
@@ -53,14 +61,24 @@ export default function Box(props: IBox) {
     whileInView: { opacity: 1, y: 0 },
     transition: { ease: "easeInOut",delay,type: "spring", bounce: 0.3, duration: duration / 1000 },
   };
+  const MOTION_FADELEFT = {
+    initial: { opacity: 0, x: x },
+    whileInView: { opacity: 1, y: 0 },
+    transition: { ease: "easeInOut",delay,type: "spring", bounce: 0.3, duration: duration / 1000 },
+  };
+  const MOTION_FADERIGHT = {
+    initial: { opacity: 0, x: -x },
+    whileInView: { opacity: 1, x: 0 },
+    transition: { ease: "easeInOut",delay,type: "spring", bounce: 0.3, duration: duration / 1000 },
+  };
   const variants = {
     fade: MOTION_FADE,
     fadeup: MOTION_FADEUP,
     fadein: MOTION_FADEIN,
     fadeout: MOTION_FADEOUT,
     fadedown: MOTION_FADEDOWN,
-    fadeleft: MOTION_FADEDOWN,
-    faderight: MOTION_FADEDOWN,
+    fadeleft: MOTION_FADELEFT,
+    faderight: MOTION_FADERIGHT,
   }
   return <CustomMotionTag {...variants[variant]} {...restOfProps}>{children}</CustomMotionTag>;
 }

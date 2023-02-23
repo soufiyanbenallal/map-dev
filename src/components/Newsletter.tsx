@@ -1,3 +1,5 @@
+import Box from "./Box";
+
 /*
   This example requires Tailwind CSS v2.0+ 
   
@@ -16,8 +18,8 @@
 */
 export default function Newsletter() {
     return (
-      <div className="bg-gradient-to-l from-slate-100 ">
-        <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:py-24 lg:px-8 flex-col flex md:flex-row justify-between items-center">
+      <Box as="section" variant="fade" className="bg-gradient-to-l from-sla te-100 ">
+        <article className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:py-24 lg:px-8 flex-col flex md:flex-row justify-between items-center">
             <div className="flex-1">
                 <h2 className="inline text-sm font-extralight tracking-widest text-gray-900 sm:block sm:text-base">
                     Want application news and new updates?
@@ -48,8 +50,8 @@ export default function Newsletter() {
               </button>
             </div>
           </form>
-        </div>
-      </div>
+        </article>
+      </Box>
     )
   }
   

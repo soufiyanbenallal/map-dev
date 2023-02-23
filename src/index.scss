@@ -18,7 +18,7 @@
 }
 
 .button-primary {
-  @apply flex gap-3 text-sm rounded-[9px] font-semibold text-gray-700 bg-gradient-to-r from-gray-200 shadow-sm to-slate-300 hover:shadow-none tracking-wider hover:scale-105 px-5 py-1.5;
+  @apply flex gap-3 text-sm rounded-[9px] font-medium text-gray-700 bg-gradient-to-r from-gray-200 shadow-sm to-slate-300 hover:shadow-none tracking-wider hover:scale-105 px-5 py-1.5;
 }
 
 .button-secondary {
