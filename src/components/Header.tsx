@@ -20,7 +20,7 @@ export default function Header() {
       setCollapse(window.scrollY > window.innerHeight/4);
     };
   return (
-      <header className={"bg-white fixed top-0 left-0 z-50 w-full transition-all duration-500 "+ (collapse  ? 'py-2 shadow-sm' : 'bg-opacity-0  py-6')}>
+      <header className={"bg-white fixed top-0 left-0 z-50 w-full transition-all duration-500 "+ (collapse  ? 'py-2 border-b ' : 'bg-opacity-0  py-6')}>
         <nav className="px-4 sm:px-6 lg:px-8" aria-label="Top">
           <div className="flex w-full items-center justify-between">
               <Link to={routesEnum.home} className='flex gap-2 outline-none'>
