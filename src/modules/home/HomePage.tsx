@@ -2,7 +2,6 @@ import React,{ useState, ReactElement } from 'react'
 import reactLogo from '@/assets/react.svg'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
-import Header from '@/components/Header'
 import HeroSection from '@/components/HeroSection'
 import Logos from '@/components/Logos'
 import Newsletter from '@/components/Newsletter'
@@ -11,10 +10,11 @@ import GithubProjectSection from './components/GithubProjectSection'
 import HeaderSection from './components/HeaderSection'
 import ProjectsShowCaseSection from './components/ProjectsShowCaseSection'
 import FlowSection from './components/FlowSection'
+import PageLayout from '@/layouts/PageLayout'
 
 export default function HomePage(): ReactElement {
   return (
-    <>
+    <PageLayout>
       <HeaderSection />
       <ProjectsShowCaseSection />
       <Divider />
@@ -28,7 +28,7 @@ export default function HomePage(): ReactElement {
       {/* <Contact /> */}
       <Newsletter />
       <Divider />
-    </>
+    </PageLayout>
   )
 }
 

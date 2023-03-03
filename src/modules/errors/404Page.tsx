@@ -1,3 +1,4 @@
+import PageLayout from "@/layouts/PageLayout";
 import { useRouteError } from "react-router-dom";
 
 export default function Error404Page() {
@@ -5,8 +6,8 @@ export default function Error404Page() {
   console.error(error);
 
   return (
-    <div className="grid h-screen px-4 bg-white place-content-center">
+    <PageLayout className="grid h-screen px-4 bg-white place-content-center">
         <h1 className="tracking-widest text-gray-500 uppercase">404 | Not Found</h1>
-    </div>
+    </PageLayout>
   );
 }

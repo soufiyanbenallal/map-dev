@@ -5,7 +5,6 @@ import { routesEnum } from '@/enums';
 import HomePage from '@/modules/home/HomePage'
 import TeamPage from '@/modules/team/TeamPage'
 import ServicesPage from '@/modules/services/ServicesPage';
-import WorksPage from '@/modules/works/WorksPage';
 import SolutionsPage from '@/modules/solutions/SolutionsPage';
 import ContactPage from './modules/contact/ContactPage';
 
@@ -29,10 +28,6 @@ const router = createBrowserRouter([
         {
           path: routesEnum.services,
           element: <ServicesPage />,
-        },
-        {
-          path: routesEnum.works,
-          element: <WorksPage />,
         },
         {
           path: routesEnum.team,

@@ -77,7 +77,7 @@ export default function GithubProjectSection() {
       </article>
       <article className="p-20 flex items-center justify-center">
         <Button
-          to={routesEnum.works}
+          to={routesEnum.solutions}
           variant="secondary"
           icon={<ArrowRightIcon className="w-4 text-pink-700 animate-pulse" />}
         >

@@ -21,6 +21,7 @@ import spinner from "@/assets/svg/spinner.svg";
 import gitlab from "@/assets/svg/gitlab.svg";
 import bitbucket from "@/assets/svg/bitbucket.svg";
 import Box from "@/components/Box";
+import featuresImage from "@/assets/images/features-top-image.png";
 
 const SpinnerIcon = ({ className }: { className?: string }) => (
   <img
@@ -189,6 +190,10 @@ export default function FlowSection() {
           <UsersIcon className="text-slate-700 animate-pulse w-8 opacity-40 absolute bottom-2 right-14" />
         </Box>
       </ul>
+      <article className="container mx-auto px-10">
+        {/* <div className="gra"></div> */}
+        <img src={featuresImage} className='w-full' alt="features-top-image" />
+      </article>
     </section>
   );
 }

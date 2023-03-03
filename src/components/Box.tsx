@@ -58,7 +58,8 @@ export default function Box(props: IBox) {
   };
   const MOTION_FADEDOWN = {
     initial: { opacity: 0, y: -y },
-    whileInView: { opacity: 1, y: 0 },
+    exit: { opacity: 0, y: -y },
+    animate: { opacity: 1, y: 0 },
     transition: { ease: "easeInOut",delay,type: "spring", bounce: 0.3, duration: duration / 1000 },
   };
   const MOTION_FADELEFT = {

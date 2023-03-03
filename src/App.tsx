@@ -1,19 +1,16 @@
-import React,{ useState, ReactElement } from 'react'
-import MainLayout from '@/layouts/MainLayout'
-import HomePage from '@/modules/home/HomePage'
-import TeamPage from '@/modules/team/TeamPage'
+import React,{ ReactElement } from 'react'
 import {
-  createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Error404Page from '@/modules/errors/404Page';
-import { routesEnum } from '@/enums';
 import router from './routes';
+import { AnimatePresence } from 'framer-motion';
 
 
 function App(): ReactElement {
   return (
+    <AnimatePresence mode="wait">
         <RouterProvider router={router} />
+    </AnimatePresence>
   )
 }
 
