@@ -6,6 +6,7 @@ import logo from '@assets/logo.svg'
 import classNames from 'classnames';
 import Button from './Button';
 import Box from './Box';
+import Logo from './Logo';
 
 
 
@@ -26,15 +27,17 @@ export function Header() {
         <nav className="m-container" aria-label="Top">
           <div className="flex w-full items-center justify-between">
               <Link to={routesEnum.home} className='flex gap-2 outline-none' >
-                <Box as='img' variant='fadeout' src={logo}  className="h-7" alt="React logo" />
+                <Box as='div' variant='fadeout' src={logo}   alt="React logo">
+                  <Logo className="h-7" />
+                </Box>
               </Link>
               <ul className="ml-4 hidden gap-5 md:flex">
                 {NAVIGATION.map((link, index) => (
                   <Box as='li' variant='fadedown' y={20} delay={index * .2} key={link.name}>
                     <NavLink to={link.href}
-                    className={({ isActive }) =>
-                      classNames(isActive ? 'text-slate-800 dark:text-white' : 'text-gray-400','text-[13px] font-normal leading-5 dark:hover:text-white hover:text-black', link.className)
-                    }>
+                      className={({ isActive }) =>
+                        classNames(isActive ? 'text-slate-800 dark:text-white' : 'text-gray-400','text-[13px] font-normal leading-5 dark:hover:text-white hover:text-black', link.className)
+                      }>
                       {link.name}
                     </NavLink>
                     {link.href !== routesEnum.contact && <span className='text-gray-400 text-xs pt-1 ml-5'>•</span>}

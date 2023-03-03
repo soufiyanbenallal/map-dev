@@ -48,6 +48,7 @@ const ArrowIcon = ({ className }: { className?: string }) => (
 export default function FlowSection() {
   return (
     <section className="bg-white py-20">
+      <div className="m-container">
       <article className="text-gray-800  flex flex-col items-center justify-center">
         <h3 className="text-3xl text-center w-full font-bold tracking-wide uppercase">
           App Integration flow
@@ -56,7 +57,7 @@ export default function FlowSection() {
           We provide a smooth flow process and organisation
         </p>
       </article>
-      <ul className="flex gap-2 py-20 items-center justify-between container mx-auto px-10">
+      <ul className="flex gap-2 py-20 items-center justify-between">
         <Box as="li" variant="faderight" className="flex1 relative h-40 w-48">
           {/* left  */}
           <CodeBracketSquareIcon className="text-slate-700 animate-pulse w-9 opacity-75 absolute top-4 left-7" />
@@ -190,10 +191,9 @@ export default function FlowSection() {
           <UsersIcon className="text-slate-700 animate-pulse w-8 opacity-40 absolute bottom-2 right-14" />
         </Box>
       </ul>
-      <article className="container mx-auto px-10">
         {/* <div className="gra"></div> */}
         <img src={featuresImage} className='w-full' alt="features-top-image" />
-      </article>
+      </div>
     </section>
   );
 }

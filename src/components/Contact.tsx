@@ -1,17 +1,19 @@
 import contactImage from "@assets/images/contact.png";
 import { FormEvent, useRef, useState } from "react";
 import emailjs from '@emailjs/browser';
+import classNames from "classnames";
 export default function Contact() {
-  const form = useRef<string | HTMLFormElement>('');
+  const form = useRef<null | HTMLFormElement>(null);
+  const [isSent, setIsSent] = useState(false)
   const sendEmail = (e: FormEvent) => {
     e.preventDefault();
-
-    emailjs.sendForm('service_1322vlr', 'template_njowlpd', form.current, '_xSH9XBrgopXlpuil')
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
-      });
+    setIsSent(true) 
+    // emailjs.sendForm('service_1322vlr', 'template_njowlpd', form.current || '', '_xSH9XBrgopXlpuil')
+    //   .then((result) => {
+    //       console.log(result.text);
+    //   }, (error) => {
+    //       console.log(error.text);
+    //   });
   };
 
     return (
@@ -26,7 +28,7 @@ export default function Contact() {
           </div>
         </div>
         <div className="relative py-8 px-4 sm:py-16 h-[110vh] sm:px-6 lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:px-8 lg:py-32">
-          <div className="lg:pr-8">
+          <div className="lg:pr-8 border-r">
             <div className="mx-auto max-w-md sm:max-w-lg lg:mx-0">
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Let's work together</h2>
               <p className="mt-4 text-sm font-extralight text-gray-500 sm:mt-3">
@@ -130,12 +132,12 @@ export default function Contact() {
                     />
                   </div>
                 </div>
-                <div className="text-right sm:col-span-2">
+                <div className="text-right w-full sm:col-span-2">
                   <button
                     type="submit"
-                    className="inline-flex justify-center rounded-md border border-transparent bg-rose-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-rose-700 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-offset-2"
+                    className={classNames("button button-primary min-w-[150px] justify-center ml-auto",isSent && 'pointer-events-none opacity-40' )}
                   >
-                    Submit
+                    {isSent ? 'Sent' : 'Send'}
                   </button>
                 </div>
               </form>
