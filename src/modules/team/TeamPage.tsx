@@ -21,7 +21,6 @@ export default function HomePage(): ReactElement {
   return (
     <PageLayout className='mt-10'>
       <OurTeam profiles={profiles} />
-      {/* <Contact /> */}
       <Divider />
       <Newsletter />
       <Divider />

@@ -1,5 +1,19 @@
 import contactImage from "@assets/images/contact.png";
+import { FormEvent, useRef, useState } from "react";
+import emailjs from '@emailjs/browser';
 export default function Contact() {
+  const form = useRef<string | HTMLFormElement>('');
+  const sendEmail = (e: FormEvent) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_1322vlr', 'template_njowlpd', form.current, '_xSH9XBrgopXlpuil')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
+
     return (
       <div className="relative">
         <div className="lg:absolute lg:inset-0">
@@ -18,7 +32,7 @@ export default function Contact() {
               <p className="mt-4 text-sm font-extralight text-gray-500 sm:mt-3">
                 We’d love to hear from you! Send us a message using the form opposite, or email us.
               </p>
-              <form action="#" method="POST" className="mt-9 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+              <form ref={form} onSubmit={sendEmail} className="mt-9 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
                 <div>
                   <label htmlFor="first-name" className="block text-xs font-medium text-gray-700">
                     First name
@@ -26,7 +40,7 @@ export default function Contact() {
                   <div className="mt-1">
                     <input
                       type="text"
-                      name="first-name"
+                      name="first_name"
                       id="first-name"
                       autoComplete="given-name"
                       className="block w-full rounded-md border-gray-300 shadow-sm focus:border-rose-500 focus:ring-rose-500 sm:text-sm"
@@ -40,7 +54,7 @@ export default function Contact() {
                   <div className="mt-1">
                     <input
                       type="text"
-                      name="last-name"
+                      name="last_name"
                       id="last-name"
                       autoComplete="family-name"
                       className="block w-full rounded-md border-gray-300 shadow-sm focus:border-rose-500 focus:ring-rose-500 sm:text-sm"
@@ -48,13 +62,13 @@ export default function Contact() {
                   </div>
                 </div>
                 <div className="sm:col-span-2">
-                  <label htmlFor="email" className="block text-xs font-medium text-gray-700">
+                  <label htmlFor="user_email" className="block text-xs font-medium text-gray-700">
                     Email
                   </label>
                   <div className="mt-1">
                     <input
-                      id="email"
-                      name="email"
+                      id="user_email"
+                      name="user_email"
                       type="email"
                       autoComplete="email"
                       className="block w-full rounded-md border-gray-300 shadow-sm focus:border-rose-500 focus:ring-rose-500 sm:text-sm"
@@ -87,15 +101,15 @@ export default function Contact() {
                     <label htmlFor="how-can-we-help" className="block text-xs font-medium text-gray-700">
                       How can we help you?
                     </label>
-                    <span id="how-can-we-help-description" className="text-sm text-gray-500">
+                    <span id="message-description" className="text-sm text-gray-500">
                       Max. 500 characters
                     </span>
                   </div>
                   <div className="mt-1">
                     <textarea
-                      id="how-can-we-help"
-                      name="how-can-we-help"
-                      aria-describedby="how-can-we-help-description"
+                      id="message"
+                      name="message"
+                      aria-describedby="message-description"
                       rows={4}
                       className="block w-full rounded-md border-gray-300 shadow-sm focus:border-rose-500 focus:ring-rose-500 sm:text-sm"
                       defaultValue={''}
@@ -110,7 +124,7 @@ export default function Contact() {
                   <div className="mt-1">
                     <input
                       type="text"
-                      name="how-did-you-hear-about-us"
+                      name="how_did_you_hear_about_us"
                       id="how-did-you-hear-about-us"
                       className="block w-full rounded-md border-gray-300 shadow-sm focus:border-rose-500 focus:ring-rose-500 sm:text-sm"
                     />
